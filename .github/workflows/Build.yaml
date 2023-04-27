@@ -12,7 +12,7 @@ jobs:
       steps:
          - uses: actions/checkout@v3
          - id: foo
-           uses: cdsap/ge-experiment-runner@v1.2
+           uses: cdsap/ge-experiment-runner@v.1.2
            with:
              task: "assembleDebug"
              iterations: 5
