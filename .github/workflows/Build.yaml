@@ -65,7 +65,7 @@ jobs:
              task: "assembleDebug"
              max-builds: 999
              experiment-id: ${{github.run_number}}
-             tags: "gg_kp, gg_kp_2"
+             tags: "gp_kg, gp_kg_2"
              project: "nowinandroid"
              api-key: ${{ secrets.GE_API_KEY }}
              url: ${{ secrets.GE_URL }}
@@ -82,7 +82,7 @@ jobs:
              task: "lint"
              max-builds: 999
              experiment-id: ${{github.run_number}}
-             tags: "gg_kp, gg_kp_2"
+             tags: "gp_kg, gp_kg_2"
              project: "nowinandroid"
              api-key: ${{ secrets.GE_API_KEY }}
              url: ${{ secrets.GE_URL }}
@@ -93,13 +93,13 @@ jobs:
       needs: [ test]
       steps:
          - uses: actions/checkout@v3
-         - id: fooa
+         - id: fooa 
            uses: cdsap/ge-experiment-report@v.1.2
            with:
              task: "test"
              max-builds: 999
              experiment-id: ${{github.run_number}}
-             tags: "gg_kp, gg_kp_2"
+             tags: "gp_kg, gp_kg_2"
              project: "nowinandroid"
              api-key: ${{ secrets.GE_API_KEY }}
              url: ${{ secrets.GE_URL }}
