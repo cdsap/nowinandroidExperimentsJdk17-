@@ -35,5 +35,5 @@ plugins {
     alias(libs.plugins.hilt) apply false
     alias(libs.plugins.ksp) apply false
     alias(libs.plugins.secrets) apply false
-id("io.github.cdsap.testprocess") version "0.1.2"
+id("io.github.cdsap.kotlinprocess") version "0.1.2"
 }
