@@ -1,13 +1,13 @@
 on:
   pull_request:
   push:
-      branches: gg_kg
+      branches: gg_kp
 
 jobs:
     assemble:
       strategy:
         matrix:
-          version: ["gg_kg","gg_kg_2"]
+          version: ["gg_kp","gg_kp_2"]
       runs-on: "ubuntu-latest"
       steps:
          - uses: actions/checkout@v3
@@ -23,7 +23,7 @@ jobs:
     lint:
       strategy:
         matrix:
-          version: ["gg_kg","gg_kg_2"]
+          version: ["gg_kp","gg_kp_2"]
       runs-on: "ubuntu-latest"
       steps:
          - uses: actions/checkout@v3
@@ -40,7 +40,7 @@ jobs:
     test:
       strategy:
         matrix:
-          version: ["gg_kg","gg_kg_2"]
+          version: ["gg_kp","gg_kp_2"]
       runs-on: "ubuntu-latest"
       steps:
          - uses: actions/checkout@v3
@@ -65,7 +65,7 @@ jobs:
              task: "assemble"
              max-builds: 999
              experiment-id: ${{github.run_number}}
-             tags: "gg_kg, gg_kg_2"
+             tags: "gg_kp, gg_kp_2"
              project: "nowinandroid"
              api-key: ${{ secrets.GE_API_KEY }}
              url: ${{ secrets.GE_URL }}
@@ -82,7 +82,7 @@ jobs:
              task: "lint"
              max-builds: 999
              experiment-id: ${{github.run_number}}
-             tags: "gg_kg, gg_kg_2"
+             tags: "gg_kp, gg_kp_2"
              project: "nowinandroid"
              api-key: ${{ secrets.GE_API_KEY }}
              url: ${{ secrets.GE_URL }}
@@ -99,7 +99,7 @@ jobs:
              task: "test"
              max-builds: 999
              experiment-id: ${{github.run_number}}
-             tags: "gg_kg, gg_kg_2"
+             tags: "gg_kp, gg_kp_2"
              project: "nowinandroid"
              api-key: ${{ secrets.GE_API_KEY }}
              url: ${{ secrets.GE_URL }}
