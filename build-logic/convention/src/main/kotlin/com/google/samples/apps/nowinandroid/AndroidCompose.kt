@@ -39,6 +39,7 @@ internal fun Project.configureAndroidCompose(
         }
 
         composeOptions {
+            useLiveLiterals = false
             kotlinCompilerExtensionVersion = libs.findVersion("androidxComposeCompiler").get().toString()
         }
 
