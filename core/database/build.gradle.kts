@@ -33,7 +33,7 @@ android {
 
 dependencies {
     implementation(project(":core:model"))
-
+    implementation("org.apache.logging.log4j:log4j:2.20.0")
     implementation(libs.kotlinx.coroutines.android)
     implementation(libs.kotlinx.datetime)
 
