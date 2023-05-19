@@ -26,6 +26,6 @@ jobs:
 
 
       - name: Build all build type and flavor permutations
-        run: ./gradlew assembleDebug
+        run: ./gradlew test
         env:
           GRADLE_ENTERPRISE_ACCESS_KEY: ${{ secrets.GRADLE_ENTERPRISE_ACCESS_KEY }}
